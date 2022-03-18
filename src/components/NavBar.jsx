@@ -9,8 +9,11 @@ const NavBar = (props) => {
           <Link to={"/"} className="nav-item">
             Home
           </Link>
-          <Link to={"/somewhereelse"} className="nav-item">
-            Somewhere else
+          <Link to={"/about"} className="nav-item">
+            About
+          </Link>
+          <Link to={"/projects"} className="nav-item">
+            Projects
           </Link>
         </div>
       </div>

@@ -1,21 +1,27 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { NavBar } from "./index";
+import { Switch, Route } from "react-router-dom";
+import { NavBar, Home, Projects, About } from "./index";
 
 const Main = () => {
   return (
     <div className="main-container">
-      <NavBar />
-      <h1 className="main-title">Hello Main</h1>
-      <Switch>
-        <Route path={"/"}>
-          {/* component to render */}
-        </Route>
-        <Route path={"/somewhereelse"}>
-          {/* component to render */}
-        </Route>
-        <Redirect to={"/"} />
-      </Switch>
+      <header>
+        <NavBar />
+        <h1 className="main-title">Hello Main</h1>
+      </header>
+      <div className="switch-container">
+        <Switch>
+          <Route exact path={"/"}>
+            <Home />
+          </Route>
+          <Route path={"/about"}>
+            <About />
+          </Route>
+          <Route path={"/projects"}>
+            <Projects />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 };
